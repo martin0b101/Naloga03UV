@@ -1,0 +1,102 @@
+Podatki o vozilu
+Model: Serija 3
+Prostornina motorja: 2500
+Stevilo vrat: 4/5
+Tip: 320d
+Vrsta vozila: Osebni avto
+Znamka: BMW
+Stevilo sedezev: 3 - 5 sedežev
+Moc: 120kW (163 KM)
+Gorivo: Disel
+Podatki o zavarovancu
+Priimek: Novak
+Hisna stevilka: 25
+Ulica: Kapele 25
+Ime: Janez
+Posta: 8258
+Kraj: Kapele
+Datum rojstva: 27/Januar/2000
+Podatki o zavarovanju
+Osnovno zavarovanje: AO+
+Kasko zavarovanje: Brez
+Zavarovanje za točo: Ne
+Zavarovanje za gume: Ne
+Zavarovanje za srnjad: Da
+Zavarovanje za potnike: Ne
+Zavarovanje za tretjo osebo: Ne
+Zavarovanje za parkirišče: Ne
+Zavarovanje za stekla: Ne
+Zavarovanje za krajo: Da
+Podatki o registraciji
+Registerska oznacba: KKHM212
+Kraj registracije: Koper
+Datum registracije: 2/Marec/1971
+
+Podatki o vozilu
+Model: C klasa
+Prostornina motorja: 2500
+Stevilo vrat: 4/5
+Tip: c220
+Vrsta vozila: Osebni avto
+Znamka: Mercedes-Benz
+Stevilo sedezev: 3 - 5 sedežev
+Moc: 100kW (136 KM)
+Gorivo: Disel
+Podatki o zavarovancu
+Priimek: Novak
+Hisna stevilka: 25
+Ulica: Kapele 25
+Ime: Janez
+Posta: 8258
+Kraj: Kapele
+Datum rojstva: 27/Januar/2000
+Podatki o zavarovanju
+Osnovno zavarovanje: AO+
+Kasko zavarovanje: Brez
+Zavarovanje za točo: Ne
+Zavarovanje za gume: Ne
+Zavarovanje za srnjad: Da
+Zavarovanje za potnike: Ne
+Zavarovanje za tretjo osebo: Ne
+Zavarovanje za parkirišče: Ne
+Zavarovanje za stekla: Ne
+Zavarovanje za krajo: Da
+Podatki o registraciji
+Registerska oznacba: KKHM212
+Kraj registracije: Koper
+Datum registracije: 2/Marec/1971
+
+Podatki o vozilu
+Model: hgf
+Prostornina motorja: 1350
+Stevilo vrat: 4/5
+Tip: ghfd
+Vrsta vozila: Traktor
+Znamka: Aston Martin
+Stevilo sedezev: 3 - 5 sedežev
+Moc: 66kW (89 KM)
+Gorivo: Disel
+Podatki o zavarovancu
+Priimek: ghdf
+Hisna stevilka: fdgh
+Ulica: hgfd
+Ime: ghfd
+Posta: 8258
+Kraj: hgdf
+Datum rojstva: 2/Marec/1937
+Podatki o zavarovanju
+Osnovno zavarovanje: AO+
+Kasko zavarovanje: Polno
+Zavarovanje za točo: Ne
+Zavarovanje za gume: Ne
+Zavarovanje za srnjad: Da
+Zavarovanje za potnike: Ne
+Zavarovanje za tretjo osebo: Ne
+Zavarovanje za parkirišče: Ne
+Zavarovanje za stekla: Ne
+Zavarovanje za krajo: Ne
+Podatki o registraciji
+Registerska oznacba: ghdfgh5
+Kraj registracije: jhgfjfjf
+Datum registracije: 2/Februar/1972
+

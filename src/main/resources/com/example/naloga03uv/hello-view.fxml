@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="946.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.naloga03uv.HelloController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu text="_Datoteka">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#closeApp" text="Close">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="Q" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+            </items>
+          </Menu>
+          <Menu text="_Popravi">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#clearObrazec" text="Delete">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="C" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+            </items>
+          </Menu>
+          <Menu text="_Pomo č">
+            <items>
+              <MenuItem fx:id="about" mnemonicParsing="false" onAction="#pomoc" text="About">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="H" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <ScrollPane prefHeight="932.0" prefWidth="963.0" BorderPane.alignment="CENTER">
+         <content>
+            <VBox prefHeight="1122.0" prefWidth="937.0" spacing="10.0">
+               <children>
+                  <HBox prefHeight="39.0" prefWidth="927.0" />
+                  <HBox prefHeight="64.0" prefWidth="928.0">
+                     <children>
+                        <VBox prefHeight="50.0" prefWidth="925.0">
+                           <children>
+                              <Label text="Vrsta vozila:">
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <ComboBox fx:id="vrstaVozilaBox" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="37.0" prefWidth="928.0">
+                     <children>
+                        <VBox prefHeight="37.0" prefWidth="955.0">
+                           <children>
+                              <Label text="Podatki o vozilu">
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Separator prefHeight="12.0" prefWidth="928.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="167.0" prefWidth="937.0" spacing="10.0">
+                     <children>
+                        <GridPane prefHeight="158.0" prefWidth="920.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <VBox prefHeight="190.0" prefWidth="254.0">
+                                 <children>
+                                    <Label text="Znamka:">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <ComboBox fx:id="znamkaBox" />
+                                    <Label text="Moč:">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <ComboBox fx:id="mocBox" />
+                                    <Label text="Št. vrat :">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <ComboBox fx:id="stVratBox" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="190.0" prefWidth="252.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <Label text="Model:">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="modelInput">
+                                       <VBox.margin>
+                                          <Insets right="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <Label text="Gorivo:">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <ComboBox fx:id="gorivoBox" />
+                                    <Label text="Št. sedežev:">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <ComboBox fx:id="stSedezevBox" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="190.0" prefWidth="300.0" GridPane.columnIndex="2">
+                                 <children>
+                                    <Label text="Tip:">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="tipInput" prefHeight="25.0" prefWidth="194.0">
+                                       <VBox.margin>
+                                          <Insets right="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <Label text="Prostornina:">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <ComboBox fx:id="prosotrninaBox" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="41.0" prefWidth="928.0">
+                     <children>
+                        <VBox prefHeight="39.0" prefWidth="928.0">
+                           <children>
+                              <Label text="Podatki o zavarovancu:" />
+                              <Separator prefHeight="14.0" prefWidth="928.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="58.0" prefWidth="928.0" spacing="10.0">
+                     <children>
+                        <GridPane prefHeight="49.0" prefWidth="919.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <VBox prefHeight="100.0" prefWidth="448.0">
+                                 <children>
+                                    <Label text="Ime:">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="imeInput">
+                                       <VBox.margin>
+                                          <Insets right="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="100.0" prefWidth="470.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <Label text="Priimek:">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="priimekInput">
+                                       <VBox.margin>
+                                          <Insets right="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="78.0" prefWidth="917.0" spacing="10.0">
+                     <children>
+                        <GridPane prefHeight="69.0" prefWidth="916.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <VBox prefHeight="79.0" prefWidth="228.0">
+                                 <children>
+                                    <Label text="Ulica:">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="ulicaInput">
+                                       <VBox.margin>
+                                          <Insets right="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="78.0" prefWidth="238.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <Label text="Hišna številka:">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="hisnaStevilkaInput">
+                                       <VBox.margin>
+                                          <Insets right="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="78.0" prefWidth="239.0" GridPane.columnIndex="2">
+                                 <children>
+                                    <Label text="Pošta:">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="postaInput">
+                                       <VBox.margin>
+                                          <Insets right="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="78.0" prefWidth="224.0" GridPane.columnIndex="3">
+                                 <children>
+                                    <Label text="Kraj:">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="krajInput">
+                                       <VBox.margin>
+                                          <Insets right="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="937.0" spacing="10.0">
+                     <children>
+                        <Label text="Datum rojstva:" />
+                        <ComboBox fx:id="danBox" />
+                        <ComboBox fx:id="mesecBox" />
+                        <ComboBox fx:id="letoBox" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="54.0" prefWidth="937.0">
+                     <children>
+                        <VBox prefHeight="70.0" prefWidth="937.0">
+                           <children>
+                              <Label text="Podatki o zavarovanju" />
+                              <Separator prefHeight="0.0" prefWidth="937.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="48.0" prefWidth="937.0" spacing="10.0">
+                     <children>
+                        <Label text="Osnovno zavarovanje:" />
+                        <RadioButton fx:id="zavAO" mnemonicParsing="false" text="AO" />
+                        <RadioButton fx:id="zavAOPlus" mnemonicParsing="false" text="AO+" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="39.0" prefWidth="937.0" spacing="10.0">
+                     <children>
+                        <Label text="Kasko:" />
+                        <RadioButton fx:id="kaskoBrez" mnemonicParsing="false" text="Brez" />
+                        <RadioButton fx:id="kaskoPolno" mnemonicParsing="false" text="Polno" />
+                        <RadioButton fx:id="kaskoOdbita" mnemonicParsing="false" text="Odbita franšuza" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="162.0" prefWidth="937.0">
+                     <children>
+                        <VBox prefHeight="175.0" prefWidth="937.0">
+                           <children>
+                              <Label text="Dodatno zavarovanje:" />
+                              <GridPane>
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <CheckBox fx:id="zavTociCheck" mnemonicParsing="false" text="Zavarovanje proti toči" />
+                                    <CheckBox fx:id="zavSrnjadiCheck" mnemonicParsing="false" text="Zavarovanje proti srnjadi" GridPane.rowIndex="1" />
+                                    <CheckBox fx:id="zavTrejteOsebCheck" mnemonicParsing="false" text="Zavarovanje tretje osebe" GridPane.rowIndex="2" />
+                                    <CheckBox fx:id="zavKrajeCheck" mnemonicParsing="false" text="Zavarovanje proti kraji" GridPane.columnIndex="1" />
+                                    <CheckBox fx:id="zavarovanjeGumCheck" mnemonicParsing="false" text="Zavarovanje gum" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <CheckBox fx:id="zavPrakiriscaCheck" mnemonicParsing="false" text="Zavarovanje na parkirišču" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <CheckBox fx:id="zavarovanjeSteklCheck" mnemonicParsing="false" text="Zavarovanje stekl" GridPane.rowIndex="3" />
+                                    <CheckBox fx:id="zavPotCheck" mnemonicParsing="false" text="Zavarovanje potnikov" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="47.0" prefWidth="937.0">
+                     <children>
+                        <VBox prefHeight="60.0" prefWidth="937.0">
+                           <children>
+                              <Label text="Podatki o registraciji" />
+                              <Separator prefWidth="200.0" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <GridPane prefHeight="93.0" prefWidth="920.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <VBox prefHeight="99.0" prefWidth="264.0">
+                                 <children>
+                                    <Label text="Dan 1. registracije">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <ComboBox fx:id="danRegistracijeBox" />
+                                    <Label text="Registerska označba:">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="registerskaOznacbaInput">
+                                       <VBox.margin>
+                                          <Insets right="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="99.0" prefWidth="308.0" GridPane.columnIndex="1">
+                                 <children>
+                                    <Label text="Mesec 1. registracije">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <ComboBox fx:id="mesecRegistracijeBox" />
+                                    <Label text="Kraj 1. registracije:">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="krajRegistracijeInput">
+                                       <VBox.margin>
+                                          <Insets right="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="99.0" prefWidth="412.0" GridPane.columnIndex="2">
+                                 <children>
+                                    <Label text="Letnik 1. registracije:">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <ComboBox fx:id="letoPrveRegistracije" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" prefHeight="61.0" prefWidth="917.0" spacing="10.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#deleteObrazec" text="Pobriši" />
+                        <Button mnemonicParsing="false" onAction="#submitValues" text="Shrani" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="10.0" right="10.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </center>
+   <bottom>
+      <Label fx:id="status" text="Status:" BorderPane.alignment="CENTER_LEFT">
+         <BorderPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </BorderPane.margin>
+      </Label>
+   </bottom>
+</BorderPane>
