@@ -261,11 +261,11 @@ public class HelloController implements Initializable {
             save.setHeaderText("Ali želite shraniti podatke?");
             Optional<ButtonType> result = save.showAndWait();
             if (result.get() == ButtonType.OK){
-                System.out.println("Shranjeno");
+                statusSetText("Status: shranjujem podatkev bazo.");
                 //save data
                 crateDataBaze();
             }else{
-                System.out.println("Ni shranjeno");
+                statusSetText("Status: podatki niso bili shranjeni.");
             }
         }else {
             Alert izpolni = new Alert(Alert.AlertType.WARNING, "Prosim izpolni obrazec");
@@ -287,7 +287,8 @@ public class HelloController implements Initializable {
             }
         } catch (IOException e) {
             Alert cantSaveToDataBaze = new Alert(Alert.AlertType.ERROR, "Shranjevanje v bazo podatkov je spodletelo!");
-             cantSaveToDataBaze.show();
+            cantSaveToDataBaze.show();
+            statusSetText("Status: shranjevanje spodletelo.");
         }
     }
 
@@ -295,6 +296,7 @@ public class HelloController implements Initializable {
         try{
             FileWriter writer = new FileWriter(fileName, true);
             //write
+            statusSetText("Status: pišem v "+fileName);
             writer.write(getDataToWrite().toString());
             //close
             writer.close();
@@ -362,6 +364,8 @@ public class HelloController implements Initializable {
         zavPrakiriscaCheck.setSelected(false);
         zavPotCheck.setSelected(false);
 
+        // status
+        statusSetText("Status: ");
 
 
     }
@@ -375,6 +379,7 @@ public class HelloController implements Initializable {
         } else {
             Alert a = new Alert(Alert.AlertType.WARNING, "Prosim izberi vrsto vozila!");
             a.show();
+            statusSetText("Status: Opozorilo");
             //empty valuesOfVozila
             valuseOfVozila.clear();
             return;
@@ -386,6 +391,7 @@ public class HelloController implements Initializable {
         } else {
             Alert a = new Alert(Alert.AlertType.WARNING, "Prosim izberi znamko vozila!");
             a.show();
+            statusSetText("Status: Opozorilo");
             //empty valuesOfVozila
             valuseOfVozila.clear();
             return;
@@ -398,6 +404,7 @@ public class HelloController implements Initializable {
         } else {
             Alert a = new Alert(Alert.AlertType.WARNING, "Prosim izberi model vozila!");
             a.show();
+            statusSetText("Status: Opozorilo");
             //empty valuesOfVozila
             valuseOfVozila.clear();
             return;
@@ -409,6 +416,7 @@ public class HelloController implements Initializable {
         } else {
             Alert a = new Alert(Alert.AlertType.WARNING, "Prosim izberi tip vozila!");
             a.show();
+            statusSetText("Status: Opozorilo");
             //empty valuesOfVozila
             valuseOfVozila.clear();
             return;
@@ -420,6 +428,7 @@ public class HelloController implements Initializable {
         } else {
             Alert a = new Alert(Alert.AlertType.WARNING, "Prosim izberi moc vozila!");
             a.show();
+            statusSetText("Status: Opozorilo");
             //empty valuesOfVozila
             valuseOfVozila.clear();
             return;
@@ -431,6 +440,7 @@ public class HelloController implements Initializable {
         } else {
             Alert a = new Alert(Alert.AlertType.WARNING, "Prosim izberi stevilo vrat vozila!");
             a.show();
+            statusSetText("Status: Opozorilo");
             //empty valuesOfVozila
             valuseOfVozila.clear();
             return;
@@ -442,6 +452,7 @@ public class HelloController implements Initializable {
         } else {
             Alert a = new Alert(Alert.AlertType.WARNING, "Prosim izberi gorivo vozila!");
             a.show();
+            statusSetText("Status: Opozorilo");
             //empty valuesOfVozila
             valuseOfVozila.clear();
             return;
@@ -453,6 +464,7 @@ public class HelloController implements Initializable {
         } else {
             Alert a = new Alert(Alert.AlertType.WARNING, "Prosim izberi prostornino motorja vozila!");
             a.show();
+            statusSetText("Status: Opozorilo");
             //empty valuesOfVozila
             valuseOfVozila.clear();
             return;
@@ -464,6 +476,7 @@ public class HelloController implements Initializable {
         } else {
             Alert a = new Alert(Alert.AlertType.WARNING, "Prosim izberi stevilo sedezev v vozilu!");
             a.show();
+            statusSetText("Status: Opozorilo");
             //empty valuesOfVozila
             valuseOfVozila.clear();
         }
@@ -478,6 +491,7 @@ public class HelloController implements Initializable {
         } else {
             Alert a = new Alert(Alert.AlertType.WARNING, "Prosim vnesi ime!");
             a.show();
+            statusSetText("Status: Opozorilo");
             //emtyp podatke zavarovnca
             valuesOfZavarovanca.clear();
             return;
@@ -489,6 +503,7 @@ public class HelloController implements Initializable {
         } else {
             Alert a = new Alert(Alert.AlertType.WARNING, "Prosim vnesi priimek!");
             a.show();
+            statusSetText("Status: Opozorilo");
             //emtyp podatke zavarovnca
             valuesOfZavarovanca.clear();
             return;
@@ -500,6 +515,7 @@ public class HelloController implements Initializable {
         } else {
             Alert a = new Alert(Alert.AlertType.WARNING, "Prosim vnesi ulico!");
             a.show();
+            statusSetText("Status: Opozorilo");
             //emtyp podatke zavarovnca
             valuesOfZavarovanca.clear();
             return;
@@ -511,6 +527,7 @@ public class HelloController implements Initializable {
         } else {
             Alert a = new Alert(Alert.AlertType.WARNING, "Prosim vnesi hisno stevilko!");
             a.show();
+            statusSetText("Status: Opozorilo");
             //emtyp podatke zavarovnca
             valuesOfZavarovanca.clear();
             return;
@@ -523,12 +540,14 @@ public class HelloController implements Initializable {
             }else{
                 Alert a = new Alert(Alert.AlertType.ERROR, "Prosim vpiši veljavno poštno številko!");
                 a.show();
+                statusSetText("Status: Opozorilo");
                 valuesOfZavarovanca.clear();
                 return;
             }
         } else {
             Alert a = new Alert(Alert.AlertType.WARNING, "Prosim vnesi posto!");
             a.show();
+            statusSetText("Status: Opozorilo");
             //emtyp podatke zavarovnca
             valuesOfZavarovanca.clear();
             return;
@@ -540,6 +559,7 @@ public class HelloController implements Initializable {
         } else {
             Alert a = new Alert(Alert.AlertType.WARNING, "Prosim vnesi kraj!");
             a.show();
+            statusSetText("Status: Opozorilo");
             //emtyp podatke zavarovnca
             valuesOfZavarovanca.clear();
             return;
@@ -557,6 +577,7 @@ public class HelloController implements Initializable {
             } else {
                 Alert a = new Alert(Alert.AlertType.WARNING, "Prosim izberi pravilen datum!");
                 a.show();
+                statusSetText("Status: Opozorilo");
                 //emtyp data
                 valuesOfZavarovanca.clear();
 
@@ -564,6 +585,7 @@ public class HelloController implements Initializable {
         } else {
             Alert a = new Alert(Alert.AlertType.WARNING, "Prosim vnesi datum rojstva!");
             a.show();
+            statusSetText("Status: Opozorilo");
             //emtyp podatke zavarovnca
             valuesOfZavarovanca.clear();
 
@@ -580,6 +602,7 @@ public class HelloController implements Initializable {
         } else {
             Alert a = new Alert(Alert.AlertType.WARNING, "Prosim izberi osnovno zavarovnaje!");
             a.show();
+            statusSetText("Status: Opozorilo");
             //emtyp podatke zavarovnca
             valuseOfZavarovanja.clear();
             return;
@@ -595,6 +618,7 @@ public class HelloController implements Initializable {
         } else {
             Alert a = new Alert(Alert.AlertType.WARNING, "Prosim izberi kasko zavarovnaje!");
             a.show();
+            statusSetText("Status: Opozorilo");
             //emtyp podatke zavarovnca
             valuseOfZavarovanja.clear();
             return;
@@ -655,6 +679,7 @@ public class HelloController implements Initializable {
             } else {
                 Alert a = new Alert(Alert.AlertType.WARNING, "Prosim izberi pravilen datum!");
                 a.show();
+                statusSetText("Status: Opozorilo");
                 //em[ty data
                 valuseOfRegistracije.clear();
                 return;
@@ -663,6 +688,7 @@ public class HelloController implements Initializable {
         } else {
             Alert a = new Alert(Alert.AlertType.WARNING, "Prosim izberi datum registracije!");
             a.show();
+            statusSetText("Status: Opozorilo");
             //emtyp podatke zavarovnca
             valuseOfRegistracije.clear();
             return;
@@ -675,6 +701,7 @@ public class HelloController implements Initializable {
             }else{
                 Alert a = new Alert(Alert.AlertType.WARNING, "Prosim vpisi pravilno registracijisko oznacbo!");
                 a.show();
+                statusSetText("Status: Opozorilo");
                 // empty data
                 valuseOfRegistracije.clear();
                 return;
@@ -683,6 +710,7 @@ public class HelloController implements Initializable {
         } else {
             Alert a = new Alert(Alert.AlertType.WARNING, "Prosim vpisi registracijisko oznacbo!");
             a.show();
+            statusSetText("Status: Opozorilo");
             //emtyp podatke zavarovnca
             valuseOfRegistracije.clear();
             return;
@@ -694,6 +722,7 @@ public class HelloController implements Initializable {
         } else {
             Alert a = new Alert(Alert.AlertType.WARNING, "Prosim vpisi kraj registracije!");
             a.show();
+            statusSetText("Status: Opozorilo");
             //emtyp podatke zavarovnca
             valuseOfRegistracije.clear();
         }
@@ -752,5 +781,9 @@ public class HelloController implements Initializable {
         help.setTitle("Pomoč uporabniku!");
         help.setContentText("Aplikacija shranjuje podatke v bazo, ob nepravilnem vpisu vas aplikacija to opomni z dialogom!");
         help.show();
+    }
+
+    private void statusSetText(String text){
+        status.setText(text);
     }
 }

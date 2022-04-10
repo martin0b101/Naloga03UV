@@ -100,3 +100,37 @@ Registerska oznacba: ghdfgh5
 Kraj registracije: jhgfjfjf
 Datum registracije: 2/Februar/1972
 
+Podatki o vozilu
+Model: C klass
+Prostornina motorja: 1800
+Stevilo vrat: 4/5
+Tip: C220
+Vrsta vozila: Osebni avto
+Znamka: Mercedes-Benz
+Stevilo sedezev: 3 - 5 sedežev
+Moc: 100kW (136 KM)
+Gorivo: Disel
+Podatki o zavarovancu
+Priimek: Novak
+Hisna stevilka: 25
+Ulica: Kapele 25
+Ime: Janez
+Posta: 8258
+Kraj: Kapele
+Datum rojstva: 27/Januar/2000
+Podatki o zavarovanju
+Osnovno zavarovanje: AO+
+Kasko zavarovanje: Polno
+Zavarovanje za točo: Da
+Zavarovanje za gume: Da
+Zavarovanje za srnjad: Da
+Zavarovanje za potnike: Da
+Zavarovanje za tretjo osebo: Da
+Zavarovanje za parkirišče: Da
+Zavarovanje za stekla: Da
+Zavarovanje za krajo: Da
+Podatki o registraciji
+Registerska oznacba: KKHM212
+Kraj registracije: Koper
+Datum registracije: 5/Maj/2009
+

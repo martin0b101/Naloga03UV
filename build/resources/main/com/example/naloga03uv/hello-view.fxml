@@ -66,14 +66,14 @@
                                     <Insets bottom="5.0" />
                                  </VBox.margin>
                               </Label>
-                              <ComboBox fx:id="vrstaVozilaBox" />
+                              <ComboBox fx:id="vrstaVozilaBox" prefWidth="200.0" />
                            </children>
                         </VBox>
                      </children>
                   </HBox>
                   <HBox prefHeight="37.0" prefWidth="928.0">
                      <children>
-                        <VBox prefHeight="37.0" prefWidth="955.0">
+                        <VBox>
                            <children>
                               <Label text="Podatki o vozilu">
                                  <VBox.margin>
@@ -104,7 +104,10 @@
                                           <Insets bottom="5.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ComboBox fx:id="znamkaBox" />
+                                    <ComboBox fx:id="znamkaBox" prefWidth="200.0">
+                                       <VBox.margin>
+                                          <Insets right="5.0" />
+                                       </VBox.margin></ComboBox>
                                     <Label text="Moč:">
                                        <VBox.margin>
                                           <Insets />
@@ -113,7 +116,10 @@
                                           <Insets bottom="5.0" top="5.0" />
                                        </padding>
                                     </Label>
-                                    <ComboBox fx:id="mocBox" />
+                                    <ComboBox fx:id="mocBox" prefWidth="200.0">
+                                       <VBox.margin>
+                                          <Insets right="5.0" />
+                                       </VBox.margin></ComboBox>
                                     <Label text="Št. vrat :">
                                        <VBox.margin>
                                           <Insets />
@@ -122,7 +128,10 @@
                                           <Insets bottom="5.0" top="5.0" />
                                        </padding>
                                     </Label>
-                                    <ComboBox fx:id="stVratBox" />
+                                    <ComboBox fx:id="stVratBox" prefWidth="200.0">
+                                       <VBox.margin>
+                                          <Insets right="5.0" />
+                                       </VBox.margin></ComboBox>
                                  </children>
                               </VBox>
                               <VBox prefHeight="190.0" prefWidth="252.0" GridPane.columnIndex="1">
@@ -132,7 +141,7 @@
                                           <Insets bottom="5.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <TextField fx:id="modelInput">
+                                    <TextField fx:id="modelInput" promptText="npr. Serija 3">
                                        <VBox.margin>
                                           <Insets right="5.0" />
                                        </VBox.margin>
@@ -142,13 +151,13 @@
                                           <Insets bottom="5.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ComboBox fx:id="gorivoBox" />
+                                    <ComboBox fx:id="gorivoBox" prefWidth="200.0" />
                                     <Label text="Št. sedežev:">
                                        <VBox.margin>
                                           <Insets bottom="5.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ComboBox fx:id="stSedezevBox" />
+                                    <ComboBox fx:id="stSedezevBox" prefWidth="200.0" />
                                  </children>
                               </VBox>
                               <VBox prefHeight="190.0" prefWidth="300.0" GridPane.columnIndex="2">
@@ -158,7 +167,7 @@
                                           <Insets bottom="5.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <TextField fx:id="tipInput" prefHeight="25.0" prefWidth="194.0">
+                                    <TextField fx:id="tipInput" prefHeight="25.0" prefWidth="194.0" promptText="npr. 320d">
                                        <VBox.margin>
                                           <Insets right="5.0" />
                                        </VBox.margin>
@@ -168,7 +177,7 @@
                                           <Insets bottom="5.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ComboBox fx:id="prosotrninaBox" />
+                                    <ComboBox fx:id="prosotrninaBox" prefWidth="200.0" />
                                  </children>
                               </VBox>
                            </children>
@@ -205,7 +214,7 @@
                                           <Insets bottom="5.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <TextField fx:id="imeInput">
+                                    <TextField fx:id="imeInput" promptText="Ime">
                                        <VBox.margin>
                                           <Insets right="5.0" />
                                        </VBox.margin>
@@ -219,7 +228,7 @@
                                           <Insets bottom="5.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <TextField fx:id="priimekInput">
+                                    <TextField fx:id="priimekInput" promptText="Priimek">
                                        <VBox.margin>
                                           <Insets right="5.0" />
                                        </VBox.margin>
@@ -250,7 +259,7 @@
                                           <Insets bottom="5.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <TextField fx:id="ulicaInput">
+                                    <TextField fx:id="ulicaInput" promptText="Ulica">
                                        <VBox.margin>
                                           <Insets right="5.0" />
                                        </VBox.margin>
@@ -264,7 +273,7 @@
                                           <Insets bottom="5.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <TextField fx:id="hisnaStevilkaInput">
+                                    <TextField fx:id="hisnaStevilkaInput" promptText="Hišna številka">
                                        <VBox.margin>
                                           <Insets right="5.0" />
                                        </VBox.margin>
@@ -278,7 +287,7 @@
                                           <Insets bottom="5.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <TextField fx:id="postaInput">
+                                    <TextField fx:id="postaInput" promptText="Pošta">
                                        <VBox.margin>
                                           <Insets right="5.0" />
                                        </VBox.margin>
@@ -292,7 +301,7 @@
                                           <Insets bottom="5.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <TextField fx:id="krajInput">
+                                    <TextField fx:id="krajInput" promptText="Kraj">
                                        <VBox.margin>
                                           <Insets right="5.0" />
                                        </VBox.margin>
@@ -306,9 +315,9 @@
                   <HBox alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="937.0" spacing="10.0">
                      <children>
                         <Label text="Datum rojstva:" />
-                        <ComboBox fx:id="danBox" />
-                        <ComboBox fx:id="mesecBox" />
-                        <ComboBox fx:id="letoBox" />
+                        <ComboBox fx:id="danBox" prefWidth="200.0" />
+                        <ComboBox fx:id="mesecBox" prefWidth="200.0" />
+                        <ComboBox fx:id="letoBox" prefWidth="200.0" />
                      </children>
                   </HBox>
                   <HBox prefHeight="54.0" prefWidth="937.0">
@@ -396,13 +405,13 @@
                                           <Insets bottom="5.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ComboBox fx:id="danRegistracijeBox" />
-                                    <Label text="Registerska označba:">
+                                    <ComboBox fx:id="danRegistracijeBox" prefWidth="200.0" />
+                                    <Label text="Registerska oznaka:">
                                        <VBox.margin>
                                           <Insets bottom="5.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <TextField fx:id="registerskaOznacbaInput">
+                                    <TextField fx:id="registerskaOznacbaInput" promptText="npr. LJ487AM">
                                        <VBox.margin>
                                           <Insets right="5.0" />
                                        </VBox.margin>
@@ -416,13 +425,13 @@
                                           <Insets bottom="5.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ComboBox fx:id="mesecRegistracijeBox" />
+                                    <ComboBox fx:id="mesecRegistracijeBox" prefWidth="200.0" />
                                     <Label text="Kraj 1. registracije:">
                                        <VBox.margin>
                                           <Insets bottom="5.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <TextField fx:id="krajRegistracijeInput">
+                                    <TextField fx:id="krajRegistracijeInput" promptText="npr. Koper">
                                        <VBox.margin>
                                           <Insets right="5.0" />
                                        </VBox.margin>
@@ -436,7 +445,7 @@
                                           <Insets bottom="5.0" top="5.0" />
                                        </VBox.margin>
                                     </Label>
-                                    <ComboBox fx:id="letoPrveRegistracije" />
+                                    <ComboBox fx:id="letoPrveRegistracije" prefWidth="200.0" />
                                  </children>
                               </VBox>
                            </children>
